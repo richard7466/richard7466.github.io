@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: rgb(61, 61, 61);
+}
+
+#Title{
+    font-size: 400%;
+    margin-top: 1vh;
+    margin-left: 2vw;
+}
+
+#Line{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 24.7vw;
+    height: 1%;
+    background-color: rgb(39, 39, 39);
+    clip-path: polygon(0 0, 100% 100%, 0 100%, 100% 0);
+    position: absolute;
+    top: 11vh;
+}
+
+.Title{
+    font-size: 200%;
+    font-weight: bolder;
+}
+.BodyPara{
+    margin-left: 1vw;
+    margin-bottom: 10vh;
+    padding: .2% 1% .2% 1%;
+    width: 50vw;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(39, 39, 39);
+    height: fit-content;
+}
+
+ul{
+    line-height: 200%;
+}
+p{
+    font-family: "Kade Mono", system-ui;
+    color: turquoise;
+}
+dd p{
+    font-family: "Merienda",cursive;
+    font-size: 140%;
+    text-align: justify;
+    color: greenyellow;
+}
+ul li{
+    font-size: 160%;
+    font-family: "Kade Mono", system-ui;
+    color: rgb(64, 224, 149);
+}
+ul ul li{
+    font-family: "Merienda",cursive;
+    font-size: 140%;
+    color: greenyellow;
+}
+.Split{
+    background-color: greenyellow;
+    clip-path: polygon(100% 0,52% 100%, 100% 100%);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}

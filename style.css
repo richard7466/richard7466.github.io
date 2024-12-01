@@ -1,0 +1,588 @@
+@keyframes SlowInvert{
+    0%{
+        filter: invert(0);
+    }
+    100%{
+        filter: invert(1);
+    }
+}
+@keyframes SlowRevert{
+    0%{
+        filter: invert(1);
+    }
+    100%{
+        filter: invert(0);
+    }
+}
+@keyframes BarSlowHue{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(-50deg);
+    }
+}
+@keyframes BarSlowRevert{
+    0%{
+        filter:hue-rotate(-50deg);
+    }
+    100%{
+        filter: invert(0deg);
+    }
+}
+/* Fonts */
+@font-face {
+    font-family: SourGummy;
+    src: url(Fonts/Sour_Gummy/SourGummy-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: FunnelDisplay;
+    src: url(Fonts/Funnel_Display/FunnelDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: GamjaFlower;
+    src: url(Fonts/Gamja_Flower/GamjaFlower-Regular.ttf);
+}
+/* Fonts */
+button:not(#Bar a button){
+    background-color: white;
+    color: black;
+    font-family: FunnelDisplay;
+    font-weight: bold;
+    animation-name: SlowRevert;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+button:not(#Bar a button):hover{
+    animation-name: SlowInvert;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+body{
+    background-image: url(Images/Background.png);
+    margin: 0;
+    border: 0;
+}
+#Bar{
+    top: 0;
+    background-image: url(Images/bar2.webp);
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5%;
+    z-index: 10;
+    border-bottom-style:solid;
+    border-color: rgba(103, 33, 33, 0.562);
+    border-bottom-width: 1vh;
+}
+#Bar a button{
+    font-family: FunnelDisplay;
+    width: 20vw;
+    height: 8vh;
+    align-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(98, 42, 42);
+    animation-name: BarSlowRevert;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+#Bar a button:hover{
+    animation-name: BarSlowHue;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+#Bar a button p{
+    font-size: 2vw;
+    margin: 0;
+}
+#Bar a div{
+    background-color: transparent;
+    border: 0;
+}
+#Bar a div img{
+    max-width: 25vw;
+    height: 90%;
+    animation-name: SlowRevert;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#Bar a div img:hover{
+    animation-name: SlowInvert;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+#HomePageDisplay{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/23/14/37/baked-goods-1853261_1280.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+@keyframes Dealer{
+    0%{
+        filter: drop-shadow(1vw -1vw 1rem rgb(255, 143, 143)) opacity(1);
+    }
+    100%{
+        filter: drop-shadow(1vw -1vw 1rem rgb(255, 143, 143)) opacity(.7);
+    }
+}
+
+#DealBox{
+    animation-name: Dealer;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    max-width: 55vh;
+    height: 55vh;
+    margin-top: 30vh;
+    margin-left: 1vw;
+    border-radius: 2rem;
+    text-align: center;
+    background: red;
+    color: aliceblue;
+    overflow: visible;
+}
+.DescSize{
+    font-family: GamjaFlower;
+    font-size: 4vh;
+    margin-top: 2vh;
+}
+#DealTitle{
+    font-family: SourGummy;
+    font-size: 10vh;
+    margin-bottom: 0;
+    margin-top: 5vh;
+}
+#BuyNow{
+    width: 50vw;
+    max-width: 40vh;
+    height: 10vw;
+    max-height: 10vh;
+    font-size: 3.5vh;
+}
+
+
+
+
+@keyframes ScaleUp{
+    0%{
+        transform: scale(100%)translateX(-12%);
+    }
+    100%{
+        transform: scale(110%)translateX(-12%);
+    }
+}
+@keyframes ScaleDown{
+    0%{
+        transform: scale(110%)translateX(-12%);
+    }
+    100%{
+        transform: scale(100%)translateX(-12%);
+    }
+}
+.PurchaseCenter{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 15vh;
+}
+.Item{
+    width: 37vh;
+    margin-top: 1.5vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.6vh;
+    font-family: GamjaFlower;
+    font-weight: bolder;
+    text-align: left;
+    color: black;
+}
+.Item p{
+    font-weight: normal;
+    font-size: 3vh;
+    margin: 0;
+    color: black;
+    text-align: left;
+}
+.Description{
+    margin: 1vh 0 1vh 0;
+}
+.Description p{
+    margin: 0;
+    font-weight: normal;
+    text-decoration: none;
+    height: 10vh;
+}
+.Sale span{
+    margin: 0;
+    height: 1vh;
+    font-size: 3vh;
+    text-decoration:line-through;
+    font-weight: normal;
+    color:rgba(0, 0, 0, 0.8);
+}
+.Sale span:nth-child(2){
+    color: black;
+    margin-left: 2%;
+    text-decoration: none;
+}
+
+.Item a{
+    margin-top: 10%;
+    width: 100%;
+    height: 20%;
+}
+.Item a button{
+    width: 100%;
+    height: 70%;
+    font-size: 2vw;
+}
+.Icon{
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    align-content:end;
+    border-radius: 1vh;
+}
+.Icon img{
+    height: 100%;
+    border-radius: 1vh;
+    animation-name: ScaleDown;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+.Icon img:hover{
+    animation-name: ScaleUp;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.Catagory{
+    margin-top: 15vh;
+    margin-bottom: .5vh;
+    text-align: center;
+    font-size: 13vh;
+    font-family: SourGummy;
+}
+
+
+
+
+
+
+
+@keyframes ShiftRed{
+    0%{
+        transform: scale(.5);
+        background-color: rgb(255, 255, 255);
+    }
+    100%{
+        transform: scale(1);
+        background-color: rgba(68, 15, 44, 0.9);
+    }
+}
+#PaperNote{
+    width: 90vh;
+    max-width: 90vw;
+    padding: 1vh;
+    border: 1vh;
+    margin: 1vh 0 1vh 0;
+    border-style: solid;
+    border-radius: 1vh;
+    animation-name: ShiftRed;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    font-size: 2.6vw;
+    font-family: GamjaFlower;
+    color: rgb(255, 239, 239);
+    border-color: black;
+}
+#SpecialBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#AboutBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5vh 0 5vh 0;
+}
+@keyframes Turn{
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+#AboutBox img{
+    width: 13%;
+    height: fit-content;
+    margin-top: auto;
+    filter: brightness(0);
+}
+#Uno{
+    animation-name: Turn;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#Dos{
+    animation-name: Turn;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+#ContactFlexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+@keyframes ContactSizeUp{
+    0%{
+        transform:scale(.9);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+@keyframes SymbolInteract{
+    0%{
+        filter:brightness(0)invert(0);
+    }
+    100%{
+        filter:brightness(0)invert(.4);
+    }
+}
+@keyframes SymbolRevert{
+    0%{
+        filter:brightness(0)invert(.4);
+    }
+    100%{
+        filter:brightness(0)invert(0);
+    }
+}
+@keyframes ContactZoom{
+    0%{
+        font-size: 3vh;
+    }
+    100%{
+        font-size: 4.9vh;
+    }
+}
+@keyframes ContactRegular{
+    0%{
+        font-size: 4.9vh;
+    }
+    100%{
+        font-size: 3vh;
+    }
+}
+.ContactInfo{
+    animation-name: ContactSizeUp;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    margin-top: 16vh;
+    width: 50vh;
+    height: 80vh;
+    text-align: center;
+    font-family: GamjaFlower;
+    font-size: 6vh;
+    align-content: center;
+}
+.ContactInfo div{
+    width: 100%;
+    height: 10%;
+}
+.ContactInfo p{
+    animation-name: ContactRegular;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+.ContactInfo p:hover{
+    animation-name: ContactZoom;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+.ContactInfo img{
+    animation-name: SymbolRevert;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    width: 100%;
+    margin-bottom: 3vh;
+}
+.ContactInfo img:hover{
+    animation-name: SymbolInteract;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+
+.OrderFrame{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 88%;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.OrderConfirm{
+    width: 60vh;
+    max-width: 90%;
+    padding: 1vw;
+    border-right-style: solid;
+    border-right-width: .2vw;
+    justify-items: center;
+}
+.OrderConfirm div{
+    overflow: hidden;
+    border-radius: 2vh;
+    width: 80%;
+    margin-bottom: 5vh;
+}
+.OrderConfirm div img{
+    width: 100%;
+}
+.OrderConfirm p{
+    font-size: 5vh;
+    font-weight: bolder;
+    font-family: SourGummy;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.OrderConfirm p:nth-child(2){
+    font-size: 3vh;
+    font-weight: normal;
+    font-family: GamjaFlower;
+    margin: 2vh 0 2vh 0;
+}
+
+
+
+.PurchaseButtonsDiv{
+    max-width: 90%;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    height: 35vh;
+}
+.PurchaseButtonsDiv a{
+    height: 25%;
+    width: 100%;
+    text-decoration: none;
+}
+.PurchaseButtonsDiv a button{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5vh;
+}
+.PurchaseButtonsDiv a button img{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    margin-left: .5vw;
+}
+.BreakBar{
+    width: 100%;
+    height: 13%;
+}
+
+
+@keyframes ScaleUpImg{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes ScaleUpSmall{
+    0%{
+        font-size: 0vh;
+    }
+    100%{
+        font-size: 4vh;
+    }
+}
+@keyframes ScaleUpBig{
+    0%{
+        font-size: 0vh;
+    }
+    100%{
+        font-size: 10vh;
+    }
+}
+
+#ConfirmedFlexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#ConfirmedFlexbox img{
+    animation-name: ScaleUpImg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 100%;
+    height: auto;
+    /* max-width: 100vh; */
+
+}
+.Small{
+    animation-name: ScaleUpSmall;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    text-align: center;
+    font-family: GamjaFlower;
+}
+.Big{
+    animation-name: ScaleUpBig;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 15vh;
+    margin-bottom: .5vh;
+    text-align: center;
+    font-family: SourGummy;
+}
